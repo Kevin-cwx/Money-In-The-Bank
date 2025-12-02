@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.cdnfonts.com/css/nimbus-sans-l" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600&display=swap" rel="stylesheet">
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏦</text></svg>">
 
@@ -23,10 +23,41 @@
         </header>
 
         <main>
+            <div class="tabs-container">
+                <button id="tabDashboard" class="tab-btn active" title="Dashboard">💳</button>
+                <button id="tabLogin" class="tab-btn" title="Login Page">👤</button>
+            </div>
+
             <div class="controls-section">
-                <div class="input-group">
-                    <label for="moneyInput">Enter Amount</label>
-                    <input type="text" id="moneyInput" placeholder="123456" value="827.06">
+                <!-- Dashboard Controls -->
+                <div id="dashboardControls" class="control-group">
+                    <div class="input-group">
+                        <label for="moneyInput">Enter Amount</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="moneyInput" placeholder="721,98.27" value="827.06">
+                            <button type="button" class="clear-btn" data-target="moneyInput">×</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Login Page Controls -->
+                <div id="loginControls" class="control-group hidden">
+                    <div class="input-group">
+                        <label for="genderSelect">Title</label>
+                        <select id="genderSelect">
+                            <option value="MR">Mr</option>
+                            <option value="MRS">Mrs</option>
+                            <option value="MS">Ms</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="nameInput">Full Name</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="nameInput" placeholder="Otmarson M G Martina"
+                                value="Otmarson Martina">
+                            <button type="button" class="clear-btn" data-target="nameInput">×</button>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="button-group">
@@ -38,7 +69,6 @@
                 <div class="canvas-wrapper">
                     <canvas id="previewCanvas"></canvas>
                 </div>
-                <p class="preview-hint">Preview</p>
             </div>
         </main>
     </div>

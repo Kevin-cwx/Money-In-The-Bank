@@ -1,0 +1,4 @@
+Tasks
+ - Add example subtext for fullname
+ - Fix login page design (small tweaks)
+ - Dont change height  when tabs are clicked
