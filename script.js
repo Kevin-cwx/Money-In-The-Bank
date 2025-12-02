@@ -48,7 +48,7 @@ function loadBaseImage() {
 
             // Position to align with "XCG" text on the same line
             CONFIG.money.x = img.width / 2; // Center horizontally
-            CONFIG.money.y = img.height / 2; // Center vertically
+            CONFIG.money.y = (img.height / 2) - 5; // Center vertically (adjusted up for visual alignment)
 
             // Position for "Current Balance" duplicate
             // Moved up slightly from 0.75, but lower than original 0.65
